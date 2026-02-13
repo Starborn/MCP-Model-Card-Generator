@@ -1,3 +1,30 @@
+# MCP Model Card Generator
+
+Generate standardized documentation for Model Context Protocol (MCP) servers.
+
+## 🚀 Quick Start
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Starborn/MCP-Model-Card-Generator/blob/main/MCP_Model_Card_Generator.ipynb)
+
+**Click the badge above to start generating your model card!**
+## ✨ Features
+
+- Interactive form-based interface
+- Generates **both** JSON (machine-readable) and Markdown (human-readable)
+- Follows [MCP Model Card Specification v1.0](MCP_Model_Card_Specification_v1_0.md)
+- Complete [User Guide](MCP_Model_Card_Generator_USER_GUIDE.md) with examples
+- Example: [Brave Search MCP Server Model Card](brave-search-mcp-server-model-card.md)
+
+## 📖 Documentation
+
+- **[User Guide](MCP_Model_Card_Generator_USER_GUIDE.md)** - Complete tutorial explaining every field
+- **[Specification](MCP_Model_Card_Specification_v1_0.md)** - Technical specification
+- **[Example](brave-search-mcp-server-model-card.md)** - Real model card example
+
+## 💙 Credits
+
+*Part of the W3C AI-KR Community Group's work on AI agent interoperability and transparency.*
+
+
 # MCP Model Card Generator - Complete User Guide and MCP tutorial
 
 **Version**: 1.0.0  
