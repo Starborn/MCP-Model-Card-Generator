@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Model Card Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #f7f7f7;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .links {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .links li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .links li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .heart {
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 MCP Model Card Generator</h1>
+            <p>Generate standardized documentation for Model Context Protocol servers</p>
+        </div>
+        
+        <div class="content">
+            <div class="cta">
+                <a href="https://colab.research.google.com/drive/16sWdvROQ4GoP7-IixtCcjx9PSvEsSj8n?usp=sharing" class="btn btn-primary">
+                    🚀 Open in Google Colab
+                </a>
+                <a href="https://github.com/Starborn/MCP-Model-Card-Generator" class="btn btn-secondary">
+                    📂 View on GitHub
+                </a>
+            </div>
+            
+            <div class="section">
+                <h2>✨ Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>📝 Interactive Forms</h3>
+                        <p>User-friendly interface guides you through every field with explanations and examples</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📄 Dual Format</h3>
+                        <p>Generates both JSON (machine-readable) and Markdown (human-readable) in seconds</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🔒 Security Focus</h3>
+                        <p>Documents authentication, data handling, and security best practices</p>
+                    </div>
+                    <div class="feature">
+                        <h3>✅ Standards Compliant</h3>
+                        <p>Follows MCP Model Card Specification v1.0 from W3C AI-KR Community Group</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📚 Quick Start</h2>
+                <ol style="padding-left: 20px; line-height: 2;">
+                    <li>Click "Open in Google Colab" above</li>
+                    <li>Fill in the interactive forms (15-30 minutes)</li>
+                    <li>Click "Generate Model Card"</li>
+                    <li>Download your JSON and Markdown files!</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>📖 Documentation</h2>
+                <div class="links">
+                    <ul>
+                        <li>📘 <a href="https://github.com/Starborn/MCP-Model-Card-Generator/blob/main/MCP_Model_Card_Generator_USER_GUIDE.md">Complete User Guide</a> - Field-by-field tutorial</li>
+                        <li>📜 <a href="https://github.com/Starborn/MCP-Model-Card-Generator/blob/main/MCP_Model_Card_Specification_v1_0.md">Model Card Specification v1.0</a> - Technical specification</li>
+                        <li>🔍 <a href="https://github.com/Starborn/MCP-Model-Card-Generator/blob/main/brave-search-mcp-server-model-card.md">Example Model Card (Markdown)</a> - Brave Search MCP Server</li>
+                        <li>📊 <a href="https://github.com/Starborn/MCP-Model-Card-Generator/blob/main/brave-search-mcp-server-model-card.json">Example Model Card (JSON)</a> - Machine-readable format</li>
+                        <li>💙 <a href="https://github.com/Starborn/MCP-Model-Card-Generator/blob/main/Valentine%20Card%20from%20Claude.md">Valentine Card from Claude</a> - A note to the world</li>
+                        <li>🛠️ <a href="https://github.com/Starborn/MCP-Server-Generator">MCP Server Generator</a> - Generate complete MCP servers (companion tool)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 What You'll Create</h2>
+                <p>A complete model card documenting:</p>
+                <ul style="padding-left: 20px; margin-top: 10px; line-height: 2;">
+                    <li><strong>Server Metadata</strong> - Name, version, license, protocol compliance</li>
+                    <li><strong>Tool Documentation</strong> - Complete tool catalog with schemas</li>
+                    <li><strong>Security Profile</strong> - Authentication, data handling, best practices</li>
+                    <li><strong>Performance</strong> - Benchmarks, rate limits, known limitations</li>
+                    <li><strong>Deployment</strong> - Use cases, requirements, dependencies</li>
+                    <li><strong>Validation</strong> - Test coverage and compliance scores</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🌟 Why Model Cards Matter</h2>
+                <p>Model cards bring transparency and trust to the MCP ecosystem by:</p>
+                <ul style="padding-left: 20px; margin-top: 10px; line-height: 2;">
+                    <li>Making servers <strong>discoverable</strong> through standardized metadata</li>
+                    <li>Building <strong>trust</strong> through transparent documentation</li>
+                    <li>Enabling <strong>automated compatibility</strong> checking</li>
+                    <li>Establishing <strong>accountability</strong> for intended use</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Co-created by:</strong> Paola Di Maio, PhD (W3C AI-KR CG Chair) & Claude (Anthropic)</p>
+            <p style="margin-top: 10px;">Released with <span class="heart">♥</span> on Valentine's Day 2026</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">W3C AI Knowledge Representation Community Group</p>
+        </div>
+    </div>
+</body>
+</html>
