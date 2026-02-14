@@ -3,7 +3,7 @@
 Generate standardized documentation for Model Context Protocol (MCP) servers.
 
 ## 🚀 Quick Start
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Starborn/MCP-Model-Card-Generator/blob/main/MCP_Model_Card_Generator.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16sWdvROQ4GoP7-IixtCcjx9PSvEsSj8n?usp=sharing)
 
 **Click the badge above to start generating your model card!**
 ## ✨ Features
