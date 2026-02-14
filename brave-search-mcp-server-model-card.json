@@ -1,0 +1,217 @@
+{
+  "mcp_model_card_version": "1.0.0",
+  "server_metadata": {
+    "name": "Brave Search MCP Server",
+    "version": "2.0.72",
+    "description": " MCP server integrating Brave Search API with web search, local search, image search, video search, news search, and AI-powered summarization capabilities\n\n\n\nLanguage: typescript\nTransports: Select both \"stdio\" and \"http+sse\"\nTags: brave, search, web-search, local-search, image-search, api",
+    "protocol_version": "2025-11-25",
+    "author": "Brave sotware   Model card geneated by PDM",
+    "license": "MIT",
+    "repository_url": "https://github.com/brave/brave-search-mcp-server",
+    "supported_transports": [
+      "stdio",
+      "http+sse"
+    ],
+    "language": "typescript",
+    "tags": [],
+    "last_updated": "2026-02-13T18:48:24.944811Z"
+  },
+  "tool_documentation": {
+    "tool_count": 3,
+    "tools": [
+      {
+        "name": "brave_web_search",
+        "description": "Performs comprehensive web searches with rich result types and advanced filtering options",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "maxLength": 400
+            },
+            "country": {
+              "type": "string",
+              "default": "US"
+            },
+            "count": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            },
+            "safesearch": {
+              "type": "string",
+              "enum": [
+                "off",
+                "moderate",
+                "strict"
+              ],
+              "default": "moderate"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "output_schema": {
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array"
+            },
+            "query": {
+              "type": "object"
+            }
+          }
+        },
+        "annotations": {
+          "destructive_hint": false,
+          "read_only": true,
+          "async": true
+        }
+      },
+      {
+        "name": "brave_local_search",
+        "description": "Searches for local businesses and places with detailed information including ratings, hours, and AI-generated descriptions",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "maxLength": 400
+            },
+            "country": {
+              "type": "string",
+              "default": "US"
+            },
+            "count": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "output_schema": {
+          "type": "object",
+          "properties": {
+            "locations": {
+              "type": "array"
+            },
+            "query": {
+              "type": "object"
+            }
+          }
+        },
+        "annotations": {
+          "destructive_hint": false,
+          "read_only": true,
+          "async": true
+        }
+      },
+      {
+        "name": " brave_image_search",
+        "description": "\nDescription: Searches for images with comprehensive metadata\nDestructive: NO\nRead-only: YES\nAsync: YES",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "maxLength": 400
+            },
+            "count": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 200,
+              "default": 50
+            },
+            "safesearch": {
+              "type": "string",
+              "enum": [
+                "off",
+                "strict"
+              ],
+              "default": "strict"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "output_schema": {
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array"
+            }
+          }
+        },
+        "annotations": {
+          "destructive_hint": false,
+          "read_only": true,
+          "async": true
+        }
+      }
+    ]
+  },
+  "operational_characteristics": {
+    "performance_benchmarks": {
+      "average_response_time_ms": 250
+    },
+    "rate_limits": {
+      "global_requests_per_minute": 60,
+      "global_requests_per_hour": 1998
+    },
+    "error_handling": {
+      "error_format": "JSON-RPC 2.0"
+    },
+    "known_limitations": [
+      "Free tier limited to 2,000 queries/month",
+      "Extra snippets require Pro plan",
+      "Local search requires Pro plan",
+      "Maximum 20 results per web search request",
+      "Maximum 9 page offset for pagination"
+    ]
+  },
+  "security_profile": {
+    "authentication": {
+      "methods": [
+        "oauth2"
+      ],
+      "required_scopes": [],
+      "credential_storage": "environment_variables"
+    },
+    "data_handling": {
+      "data_retention_policy": "No data retained; acts as stateless proxy",
+      "data_encryption_in_transit": true,
+      "pii_handling": ""
+    },
+    "security_considerations": [],
+    "security_best_practices": [],
+    "audit_logging": true
+  },
+  "deployment_context": {
+    "intended_use_cases": [],
+    "out_of_scope_scenarios": [],
+    "deployment_requirements": {
+      "environment_variables": [],
+      "external_dependencies": []
+    },
+    "maintenance": {
+      "active_maintenance": true
+    }
+  },
+  "evaluation_results": {
+    "protocol_compliance": {
+      "compliance_score": 95,
+      "validation_date": "2026-02-13T18:48:24.944911Z"
+    },
+    "functional_testing": {
+      "tests_passed": 0,
+      "tests_failed": 0
+    }
+  }
+}
